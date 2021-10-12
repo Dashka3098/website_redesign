@@ -7,17 +7,16 @@
     <title>Website Redesign</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <link href="https://www.fonts.com/font/linotype/helvetica?QueryFontType=Web&src=GoogleWebFonts" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <div class="header">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="header_logo">
-                <a href="#">
-                    <img src="img/Logo@3x.svg" alt="logo">
-                </a>
                 <span class="header_text">PROJECTUS</span>
             </div>
             <button class="header_search">
@@ -62,10 +61,11 @@
         </div>
     </div>
 
-    <div class="main">
+    <div class="main" id="main">
         <header class="website_redesign_header">
             <div class="main_menu">
                 <div class="website_redesign_logo">
+                    <button class="openbtn" onclick="openNav()">☰</button>
                     <img class="website_redesign_logo_image" src="img/Shapes@2x.png" alt="shapes">
                     <span class="website_redesign_logo_text">Website Redesign</span>
 
@@ -79,7 +79,7 @@
                 <div class="menu_items">
                     <a class="item" href="#">Tasks</a>
                     <a class="item" href="#">Kanban</a>
-                    <a class="active item" href="#">Activity</a>     
+                    <a class="active item" href="#">Activity</a>
                     <a class="item" href="#">Calendar</a>
                     <a class="item" href="#">Files</a>
                 </div>
