@@ -35,6 +35,10 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    margin-top: 0px;
+  }
+
   .sidebar {
     width: 0;
     z-index: 1;

@@ -19,9 +19,6 @@
   margin-top: 30px;
 }
 
-.closebtn {
-  display: none;
-}
 
 .header_text {
   font-family: Helvetica, sans-serif;
@@ -228,19 +225,25 @@
   display: none;
 }
 
-.website_redesign_logo_image {
-  width: 40px;
-  height: 40px;
-  background: #ffc200;
-  border-radius: 10px;
-}
-
 .website_redesign_logo_text {
   font-family: Helvetica, sans-serif;
   font-size: 32px;
   color: #131313;
-  margin-left: 15px;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.website_redesign_logo_text::before{
+  width: 40px;
+  height: 40px;
+  background-color: #ffc200;
+  border-radius: 10px;
+  background-image: url("../img/Shapes@2x.png");
+  content: "";
+  background-size: 40px 40px;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .meatball_circle {
@@ -399,6 +402,25 @@
   justify-content: left;
 }
 
+.event_done span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.event_done span::before{
+  background-color: #cef9c6;
+  display:  inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  content: url("../img/Icon@3x.svg");
+}
+
 .event_img {
   display: flex;
   justify-content: center;
@@ -407,15 +429,6 @@
   width: 40px;
   height: 40px;
   position: absolute;
-}
-
-.event_done_color {
-  position: relative;
-  background-color: #cef9c6;
-}
-
-.event_done_color::after {
-  content: url("../img/Icon_done.png");
 }
 
 .event_text {
@@ -433,9 +446,22 @@
   flex-direction: column;
 }
 
-.event_message_main {
+.event_message > span{
   display: flex;
-  justify-content: left;
+  align-items: center;
+  margin-left: 0;
+}
+
+.event_message > span::before{
+  background-color: #fff8dd;
+  display:  inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 50px;
+  content: url("../img/Icon_message.png");
 }
 
 .event_message_note {
@@ -456,15 +482,6 @@
   color: #131313;
 }
 
-.event_message_color {
-  background-color: #fff8dd;
-  position: relative;
-}
-
-.event_message_color::after {
-  content: url("../img/Icon_message.png");
-}
-
 .event_download {
   display: flex;
   margin-top: 32px;
@@ -477,12 +494,21 @@
   justify-content: left;
 }
 
-.event_download_color {
-  background-color: #e3efff;
-  position: relative;
+.event_download_main span {
+  display: flex;
+  justify-content: left;
+  margin-left: 0;
 }
 
-.event_download_color::after {
+.event_download_main span::before{
+  background-color: #e3efff;
+  display:  inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 50px;
   content: url("../img/Icon_download.png");
 }
 
