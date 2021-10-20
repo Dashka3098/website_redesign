@@ -37,3 +37,43 @@ window.addEventListener('resize', function (event) {
 	}
 });
 
+document.getElementById('tasks_completed').addEventListener('click', function (event) {
+	const tasksCompleted = confirm('Are you sure you want to change the number of tasks?');
+	if (tasksCompleted) {
+		const completed = document.getElementById('tasks_completed_number');
+		completed.innerText++;
+		const open = document.getElementById('tasks_open_number');
+		if (open.innerText > 0) {
+			open.innerText--;
+		}
+	}
+});
+
+function addImg() {
+
+	const images = [
+		'img/Bali.jpg',
+		'img/hotel.jpg',
+		'img/Santorini.png',
+		'img/mountains.jpg'
+	];
+	const container = document.getElementById('event_download_picture');
+	const fragment = document.createDocumentFragment();
+
+	images.forEach(function (url, index) {
+		const img = document.createElement('img');
+		img.src = url
+
+		img.addEventListener('click', function (event) {
+			document.getElementById('menu_notification_badge').innerText = index;
+		});
+
+		fragment.appendChild(img);
+	});
+
+	container.appendChild(fragment);
+}
+
+addImg();
+
+

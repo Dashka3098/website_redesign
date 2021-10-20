@@ -19,7 +19,6 @@
   margin-top: 30px;
 }
 
-
 .header_text {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
@@ -105,6 +104,10 @@
 .tasks_open {
   display: flex;
   flex-direction: column;
+}
+
+.tasks_completed {
+  cursor: pointer;
 }
 
 .tasks_open {
@@ -234,7 +237,7 @@
   align-items: center;
 }
 
-.website_redesign_logo_text::before{
+.website_redesign_logo_text::before {
   width: 40px;
   height: 40px;
   background-color: #ffc200;
@@ -402,16 +405,16 @@
   justify-content: left;
 }
 
-.event_done span{
+.event_done span {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0;
 }
 
-.event_done span::before{
+.event_done span::before {
   background-color: #cef9c6;
-  display:  inline-block;
+  display: inline-block;
   margin-right: 20px;
   border-radius: 50%;
   width: 40px;
@@ -446,15 +449,15 @@
   flex-direction: column;
 }
 
-.event_message > span{
+.event_message > span {
   display: flex;
   align-items: center;
   margin-left: 0;
 }
 
-.event_message > span::before{
+.event_message > span::before {
   background-color: #fff8dd;
-  display:  inline-block;
+  display: inline-block;
   margin-right: 20px;
   border-radius: 50%;
   width: 40px;
@@ -500,9 +503,9 @@
   margin-left: 0;
 }
 
-.event_download_main span::before{
+.event_download_main span::before {
   background-color: #e3efff;
-  display:  inline-block;
+  display: inline-block;
   margin-right: 20px;
   border-radius: 50%;
   width: 40px;
@@ -527,4 +530,5 @@
   height: 100px;
   margin-left: 10px;
   border-radius: 8px;
+  cursor: pointer;
 }
