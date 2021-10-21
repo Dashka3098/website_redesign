@@ -1,8 +1,4 @@
 @media (max-width: 1170px) {
-  .container {
-    max-width: 1170px;
-  }
-
   .main {
     width: 850px;
   }
@@ -13,10 +9,6 @@
 }
 
 @media (max-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-
   .main {
     width: 760px;
   }
@@ -37,9 +29,7 @@
     font-size: 12px;
   }
 
-  #yes,
-  #close,
-  #ok {
+  menu > button {
     font-size: 12px;
   }
 }
@@ -98,24 +88,59 @@
   .members {
     margin-left: 40px;
   }
+
   dialog {
     font-size: 10px;
   }
 
-  #yes,
-  #close,
-  #ok {
+  menu > button {
     font-size: 10px;
   }
 }
 
 @media (max-width: 640px) {
-  .container {
-    width: 640px;
+  .main {
+    max-width: 640px;
+  }
+
+  .openbtn {
+    margin-left: -135px;
+  }
+
+  .menu_items {
+    margin-left: 10px;
+  }
+
+  .item {
+    margin-left: 4px;
+  }
+
+  .meatball_circle {
+    margin-left: 0;
+  }
+
+  .website_redesign_logo_text {
+    font-size: 0;
+  }
+
+  .website_redesign_logo_text::before {
+    width: 40px;
+    height: 40px;
+    background-color: #ffc200;
+    border-radius: 10px;
+    background-image: url("../img/Shapes@2x.png");
+    content: "";
+    background-size: 40px 40px;
+    display: inline-block;
+    margin-right: 15px;
   }
 
   .members {
-    margin-left: 0px;
+    margin-left: 0;
+  }
+
+  .members_photo img {
+    margin-left: -20px;
   }
 
   .events {
@@ -140,5 +165,37 @@
     height: 25px;
     width: 25px;
     font-size: 0;
+  }
+
+  .events_notification {
+    padding-left: 15px;
+  }
+
+  .event_done span {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event_message {
+    margin-left: -100px;
+  }
+
+  .event_message span {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event_download_main span {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event_download_picture {
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 135px;
   }
 }

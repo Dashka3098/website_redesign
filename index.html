@@ -13,19 +13,6 @@
 <body>
 
 <div class="container">
-    <dialog id="dialog">
-        <p>Are you sure you want to change the number of tasks?</p>
-        <menu>
-            <button id="yes">Yes</button>
-            <button id="close">Close</button>   
-        </menu>
-    </dialog>
-    <dialog id="warning">
-        <p>You don't have open tasks</p>
-        <menu>
-            <button id="ok">Ok</button>
-        </menu>
-    </dialog>
     <div class="sidebar" id="sidebar">
         <div class="header">
             <div class="header_logo">
@@ -57,13 +44,13 @@
                 <span class="tasks_open_name">Open Tasks</span>
             </div>
         </div>
- 
+
         <div class="menu">
             <span class="menu_text">Menu</span>
             <a href="#" class="menu_home">Home</a>
             <a href="#" class="menu_my_tasks">My Tasks</a>
             <div class="menu_notification">
-                <a href="#" class="menu_notification_text" >Notifications</a>
+                <a href="#" class="menu_notification_text">Notifications</a>
                 <div class="menu_notification_badge" id="menu_notification_badge">
                     3
                 </div>
@@ -72,12 +59,24 @@
     </div>
 
     <div class="main" id="main">
+        <dialog id="dialog">
+            <p>Are you sure you want to change the number of tasks?</p>
+            <menu>
+                <button id="yes">Yes</button>
+                <button id="close">Close</button>
+            </menu>
+        </dialog>
+        <dialog id="warning">
+            <p>You don't have open tasks</p>
+            <menu>
+                <button id="ok">Ok</button>
+            </menu>
+        </dialog>
         <header class="website_redesign_header">
             <div class="main_menu">
                 <div class="website_redesign_logo">
                     <button class="openbtn" id="burger">☰</button>
                     <span class="website_redesign_logo_text">Website Redesign</span>
-
                     <div class="meatball_circle">
                         <span class="meatball_dot"></span>
                         <span class="meatball_dot"></span>
