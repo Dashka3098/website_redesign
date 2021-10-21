@@ -32,6 +32,16 @@
   .event_message_note {
     white-space: normal;
   }
+
+  dialog {
+    font-size: 12px;
+  }
+
+  #yes,
+  #close,
+  #ok {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -87,6 +97,15 @@
 
   .members {
     margin-left: 40px;
+  }
+  dialog {
+    font-size: 10px;
+  }
+
+  #yes,
+  #close,
+  #ok {
+    font-size: 10px;
   }
 }
 

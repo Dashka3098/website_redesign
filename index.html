@@ -13,6 +13,19 @@
 <body>
 
 <div class="container">
+    <dialog id="dialog">
+        <p>Are you sure you want to change the number of tasks?</p>
+        <menu>
+            <button id="yes">Yes</button>
+            <button id="close">Close</button>   
+        </menu>
+    </dialog>
+    <dialog id="warning">
+        <p>You don't have open tasks</p>
+        <menu>
+            <button id="ok">Ok</button>
+        </menu>
+    </dialog>
     <div class="sidebar" id="sidebar">
         <div class="header">
             <div class="header_logo">
@@ -36,15 +49,15 @@
 
         <div class="tasks">
             <div class="tasks_completed" id="tasks_completed">
-                <span class="tasks_completed_number" id="tasks_completed_number">372</span>
+                <span class="tasks_completed_number" id="tasks_completed_number"></span>
                 <span class="tasks_completed_name">Completed Tasks</span>
             </div>
             <div class="tasks_open">
-                <span class="tasks_open_number" id="tasks_open_number">11</span>
+                <span class="tasks_open_number" id="tasks_open_number"></span>
                 <span class="tasks_open_name">Open Tasks</span>
             </div>
         </div>
-
+ 
         <div class="menu">
             <span class="menu_text">Menu</span>
             <a href="#" class="menu_home">Home</a>

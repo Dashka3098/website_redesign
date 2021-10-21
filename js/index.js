@@ -10,10 +10,10 @@ for (let item of items) {
 	});
 }
 
-document.getElementById('burger').addEventListener('click', function (){
-	if (document.getElementById('sidebar').style.width === '270px'){
+document.getElementById('burger').addEventListener('click', function () {
+	if (document.getElementById('sidebar').style.width === '270px') {
 		closeNav();
-	}else {
+	} else {
 		openNav();
 	}
 })
@@ -32,37 +32,78 @@ function closeNav() {
 window.addEventListener('resize', function (event) {
 	if (window.screen.width > 768) {
 		openNav();
-	}else {
+	} else {
 		closeNav();
 	}
 });
 
-document.getElementById('tasks_completed').addEventListener('click', function (event) {
-	const tasksCompleted = confirm('Are you sure you want to change the number of tasks?');
-	if (tasksCompleted) {
-		const completed = document.getElementById('tasks_completed_number');
-		completed.innerText++;
-		const open = document.getElementById('tasks_open_number');
-		if (open.innerText > 0) {
-			open.innerText--;
+const tasks = {
+	completed: 372,
+	open: 1
+}
+
+function countTasks(tasks) {
+	const openTasks = document.getElementById('tasks_open_number');
+	const completedTasks = document.getElementById('tasks_completed_number');
+	openTasks.innerText = tasks.open;
+	completedTasks.innerText = tasks.completed
+
+	document.getElementById('tasks_completed').addEventListener('click', function (event) {
+		if (openTasks.innerText == 0) {
+			const warning = document.getElementById('warning');
+			warning.showModal();
+		    document.getElementById('ok').addEventListener('click', function () {
+		    	warning.close();
+		    })
+		    return;
 		}
+
+		const dialog = document.getElementById('dialog');
+		dialog.showModal();
+
+		document.getElementById('close').addEventListener('click', function () {
+			dialog.close();
+		})
+
+		document.getElementById('yes').addEventListener('click', function () {
+			completedTasks.innerText++;
+			openTasks.innerText--;
+			dialog.close();
+		})
+	});
+}
+
+countTasks(tasks);
+
+const images = [
+	{
+		link: 'https://funart.pro/uploads/posts/2021-04/1618659972_40-funart_pro-p-puteshestviya-po-miru-krasivie-mesta-foto-44.jpg',
+		alt: 'Itali'
+	},
+	{
+		link: 'http://photo.baliforum.ru/u/i/2018/06/15/5b2363c8217a5bF4IHC.jpg',
+		alt: 'Bali'
+	},
+	{
+		link: 'https://lifeistravel.com.ua/media/k2/items/cache/da22e32f78e379097189580a04383c67_L.jpg',
+		alt: 'Maldives'
+	},
+	{
+		link: 'https://funart.pro/uploads/posts/2021-04/1618660005_21-funart_pro-p-puteshestviya-po-miru-krasivie-mesta-foto-21.jpg',
+		alt: 'Mountains'
 	}
-});
+]
 
-function addImg() {
 
-	const images = [
-		'img/Bali.jpg',
-		'img/hotel.jpg',
-		'img/Santorini.png',
-		'img/mountains.jpg'
-	];
+function addImg(images) {
+
 	const container = document.getElementById('event_download_picture');
 	const fragment = document.createDocumentFragment();
 
-	images.forEach(function (url, index) {
+	images.forEach(function (value, index) {
 		const img = document.createElement('img');
-		img.src = url
+		img.src = value.link
+		img.alt = value.alt
 
 		img.addEventListener('click', function (event) {
 			document.getElementById('menu_notification_badge').innerText = index;
@@ -74,6 +115,6 @@ function addImg() {
 	container.appendChild(fragment);
 }
 
-addImg();
+addImg(images);
 
 
